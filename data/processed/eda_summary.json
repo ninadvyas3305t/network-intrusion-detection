@@ -1,0 +1,154 @@
+{
+  "train_shape": [
+    175341,
+    44
+  ],
+  "test_shape": [
+    82332,
+    44
+  ],
+  "total_records": 257673,
+  "numerical_feature_count": 39,
+  "categorical_feature_count": 3,
+  "categorical_features": [
+    "proto",
+    "service",
+    "state"
+  ],
+  "train_binary_distribution": {
+    "1": 119341,
+    "0": 56000
+  },
+  "test_binary_distribution": {
+    "1": 45332,
+    "0": 37000
+  },
+  "train_multiclass_distribution": {
+    "Normal": 56000,
+    "Generic": 40000,
+    "Exploits": 33393,
+    "Fuzzers": 18184,
+    "DoS": 12264,
+    "Reconnaissance": 10491,
+    "Analysis": 2000,
+    "Backdoor": 1746,
+    "Shellcode": 1133,
+    "Worms": 130
+  },
+  "test_multiclass_distribution": {
+    "Normal": 37000,
+    "Generic": 18871,
+    "Exploits": 11132,
+    "Fuzzers": 6062,
+    "DoS": 4089,
+    "Reconnaissance": 3496,
+    "Analysis": 677,
+    "Backdoor": 583,
+    "Shellcode": 378,
+    "Worms": 44
+  },
+  "high_correlations_count": 16,
+  "high_correlations": [
+    {
+      "feature_1": "is_ftp_login",
+      "feature_2": "ct_ftp_cmd",
+      "pearson_r": 1.0,
+      "domain_explanation": "FTP commands and login flags are mathematically tied in single-session FTP traffic."
+    },
+    {
+      "feature_1": "dbytes",
+      "feature_2": "dloss",
+      "pearson_r": 0.9965,
+      "domain_explanation": "Destination packet loss scales proportionally with total destination byte payload."
+    },
+    {
+      "feature_1": "sbytes",
+      "feature_2": "sloss",
+      "pearson_r": 0.9961,
+      "domain_explanation": "Source packet loss scales directly with source transmitted bytes."
+    },
+    {
+      "feature_1": "swin",
+      "feature_2": "dwin",
+      "pearson_r": 0.9901,
+      "domain_explanation": "TCP window advertisements mirror window size negotation during TCP handshakes."
+    },
+    {
+      "feature_1": "ct_srv_src",
+      "feature_2": "ct_srv_dst",
+      "pearson_r": 0.9803,
+      "domain_explanation": "In symmetric bidirectional traffic, connections from source match connections to destination service."
+    },
+    {
+      "feature_1": "dpkts",
+      "feature_2": "dloss",
+      "pearson_r": 0.9786,
+      "domain_explanation": "Direct structural dependency in bidirectional network flow monitoring."
+    },
+    {
+      "feature_1": "ct_dst_src_ltm",
+      "feature_2": "ct_srv_dst",
+      "pearson_r": 0.9724,
+      "domain_explanation": "Direct structural dependency in bidirectional network flow monitoring."
+    },
+    {
+      "feature_1": "dpkts",
+      "feature_2": "dbytes",
+      "pearson_r": 0.9719,
+      "domain_explanation": "Destination packet count directly dictates destination byte volume."
+    },
+    {
+      "feature_1": "spkts",
+      "feature_2": "sloss",
+      "pearson_r": 0.9711,
+      "domain_explanation": "Direct structural dependency in bidirectional network flow monitoring."
+    },
+    {
+      "feature_1": "ct_srv_src",
+      "feature_2": "ct_dst_src_ltm",
+      "pearson_r": 0.9671,
+      "domain_explanation": "Direct structural dependency in bidirectional network flow monitoring."
+    },
+    {
+      "feature_1": "spkts",
+      "feature_2": "sbytes",
+      "pearson_r": 0.9638,
+      "domain_explanation": "Source packet count directly dictates source byte volume."
+    },
+    {
+      "feature_1": "ct_dst_ltm",
+      "feature_2": "ct_src_dport_ltm",
+      "pearson_r": 0.9621,
+      "domain_explanation": "Local network traffic to a destination frequently targets the same destination port."
+    },
+    {
+      "feature_1": "tcprtt",
+      "feature_2": "synack",
+      "pearson_r": 0.9495,
+      "domain_explanation": "TCP RTT directly embeds the SYN-ACK handshake delay."
+    },
+    {
+      "feature_1": "tcprtt",
+      "feature_2": "ackdat",
+      "pearson_r": 0.9418,
+      "domain_explanation": "TCP RTT is the sum of SYN-ACK and ACK-DATA handshake latencies."
+    },
+    {
+      "feature_1": "sinpkt",
+      "feature_2": "is_sm_ips_ports",
+      "pearson_r": 0.9413,
+      "domain_explanation": "Direct structural dependency in bidirectional network flow monitoring."
+    },
+    {
+      "feature_1": "ct_src_dport_ltm",
+      "feature_2": "ct_dst_sport_ltm",
+      "pearson_r": 0.9068,
+      "domain_explanation": "Direct structural dependency in bidirectional network flow monitoring."
+    }
+  ],
+  "viva_insights": {
+    "collinearity_handling": "High collinearity (e.g. sbytes <-> sloss at r=0.9961, tcprtt <-> synack at r=0.9495) reflects physical network protocol mechanics (lost packets scale with sent volume; round-trip time consists of SYN-ACK and ACK-DATA latencies). Rather than blindly discarding these features, tree-based models (Random Forest, XGBoost) natively isolate threshold splits without variance inflation, while L2 regularization controls coefficients in Logistic Regression.",
+    "benchmark_split_preservation": "The official train/test partition created by Moustafa & Slay is strictly maintained. Randomly recombining would cause test-set leakage across synthetic and real captures and violate academic reproducibility.",
+    "extreme_minority_attacks": "Worms (130 train / 44 test) and Shellcode (1,133 train / 378 test) represent severe class imbalance, requiring balanced class weighting and macro-F1 evaluation."
+  }
+}

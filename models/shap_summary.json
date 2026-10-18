@@ -1,0 +1,146 @@
+{
+  "sample_size": 1000,
+  "total_features": 194,
+  "top_features": [
+    {
+      "rank": 1,
+      "feature": "sttl",
+      "base_feature": "sttl",
+      "mean_abs_shap": 1.3572,
+      "description": "Source to destination Time-To-Live (TTL value)"
+    },
+    {
+      "rank": 2,
+      "feature": "smean",
+      "base_feature": "smean",
+      "mean_abs_shap": 0.4965,
+      "description": "Mean packet size transmitted by source"
+    },
+    {
+      "rank": 3,
+      "feature": "sbytes",
+      "base_feature": "sbytes",
+      "mean_abs_shap": 0.4873,
+      "description": "Total source to destination transaction bytes"
+    },
+    {
+      "rank": 4,
+      "feature": "ct_srv_dst",
+      "base_feature": "ct_srv_dst",
+      "mean_abs_shap": 0.4206,
+      "description": "Number of connections to same destination IP and service in last 100 flows"
+    },
+    {
+      "rank": 5,
+      "feature": "ct_dst_sport_ltm",
+      "base_feature": "ct_dst_sport_ltm",
+      "mean_abs_shap": 0.2753,
+      "description": "Connections to destination from same source port"
+    },
+    {
+      "rank": 6,
+      "feature": "ct_srv_src",
+      "base_feature": "ct_srv_src",
+      "mean_abs_shap": 0.2647,
+      "description": "Number of connections from same source IP to same service in last 100 flows"
+    },
+    {
+      "rank": 7,
+      "feature": "ct_state_ttl",
+      "base_feature": "ct_state_ttl",
+      "mean_abs_shap": 0.2602,
+      "description": "State and TTL combination identifier count"
+    },
+    {
+      "rank": 8,
+      "feature": "synack",
+      "base_feature": "synack",
+      "mean_abs_shap": 0.2453,
+      "description": "TCP SYN-ACK handshake response latency"
+    },
+    {
+      "rank": 9,
+      "feature": "dbytes",
+      "base_feature": "dbytes",
+      "mean_abs_shap": 0.2194,
+      "description": "Total destination to source transaction bytes"
+    },
+    {
+      "rank": 10,
+      "feature": "ct_dst_src_ltm",
+      "base_feature": "ct_dst_src_ltm",
+      "mean_abs_shap": 0.1915,
+      "description": "Connections having same source and destination IP"
+    },
+    {
+      "rank": 11,
+      "feature": "tcprtt",
+      "base_feature": "tcprtt",
+      "mean_abs_shap": 0.1588,
+      "description": "TCP round-trip latency (synack + ackdat)"
+    },
+    {
+      "rank": 12,
+      "feature": "sloss",
+      "base_feature": "sloss",
+      "mean_abs_shap": 0.1508,
+      "description": "Source packet drop / retransmission count"
+    },
+    {
+      "rank": 13,
+      "feature": "dmean",
+      "base_feature": "dmean",
+      "mean_abs_shap": 0.1354,
+      "description": "Mean packet size transmitted by destination"
+    },
+    {
+      "rank": 14,
+      "feature": "proto_udp",
+      "base_feature": "proto_udp",
+      "mean_abs_shap": 0.1238,
+      "description": "Feature: proto_udp"
+    },
+    {
+      "rank": 15,
+      "feature": "sload",
+      "base_feature": "sload",
+      "mean_abs_shap": 0.1025,
+      "description": "Feature: sload"
+    },
+    {
+      "rank": 16,
+      "feature": "dpkts",
+      "base_feature": "dpkts",
+      "mean_abs_shap": 0.0835,
+      "description": "Feature: dpkts"
+    },
+    {
+      "rank": 17,
+      "feature": "dur",
+      "base_feature": "dur",
+      "mean_abs_shap": 0.0644,
+      "description": "Total flow connection duration in seconds"
+    },
+    {
+      "rank": 18,
+      "feature": "spkts",
+      "base_feature": "spkts",
+      "mean_abs_shap": 0.0536,
+      "description": "Feature: spkts"
+    },
+    {
+      "rank": 19,
+      "feature": "dttl",
+      "base_feature": "dttl",
+      "mean_abs_shap": 0.0511,
+      "description": "Destination to source Time-To-Live (TTL value)"
+    },
+    {
+      "rank": 20,
+      "feature": "service_http",
+      "base_feature": "service_http",
+      "mean_abs_shap": 0.051,
+      "description": "Feature: service_http"
+    }
+  ]
+}

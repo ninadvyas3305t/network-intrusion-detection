@@ -1,0 +1,180 @@
+{
+  "production_threshold_retained": 0.5,
+  "rationale": "On the held-out validation split of the training data, threshold 0.50 yielded the highest F1-score (0.9669). On the test set, threshold 0.50 maintains an exceptional 98.65% Attack Recall (only 611 missed attacks out of 45,332) while achieving 82.00% Precision and 0.8956 F1. While lower thresholds (e.g. 0.30) raise recall to 99.87%, they trigger 14,786 false alarms. Higher thresholds (0.70) reduce false alarms but cause nearly 2,000 undetected attacks. Therefore, 0.50 remains the mathematically justified production default.",
+  "random_forest_comparison": {
+    "model": "Random Forest",
+    "threshold": 0.5,
+    "precision": 0.8092,
+    "recall": 0.9894,
+    "f1": 0.8903,
+    "accuracy": 0.8657,
+    "false_positives": 10574,
+    "false_negatives": 482
+  },
+  "test_threshold_curve": [
+    {
+      "threshold": 0.1,
+      "precision": 0.7427,
+      "recall": 1.0,
+      "f1": 0.8524,
+      "accuracy": 0.8092,
+      "false_positives": 15705,
+      "false_negatives": 0,
+      "true_positives": 45332,
+      "true_negatives": 21295
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.7443,
+      "recall": 0.9999,
+      "f1": 0.8533,
+      "accuracy": 0.8108,
+      "false_positives": 15576,
+      "false_negatives": 4,
+      "true_positives": 45328,
+      "true_negatives": 21424
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.7538,
+      "recall": 0.9987,
+      "f1": 0.8592,
+      "accuracy": 0.8197,
+      "false_positives": 14786,
+      "false_negatives": 58,
+      "true_positives": 45274,
+      "true_negatives": 22214
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.7821,
+      "recall": 0.9952,
+      "f1": 0.8759,
+      "accuracy": 0.8447,
+      "false_positives": 12569,
+      "false_negatives": 219,
+      "true_positives": 45113,
+      "true_negatives": 24431
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.82,
+      "recall": 0.9865,
+      "f1": 0.8956,
+      "accuracy": 0.8734,
+      "false_positives": 9815,
+      "false_negatives": 611,
+      "true_positives": 44721,
+      "true_negatives": 27185
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.8631,
+      "recall": 0.9739,
+      "f1": 0.9151,
+      "accuracy": 0.9006,
+      "false_positives": 7003,
+      "false_negatives": 1184,
+      "true_positives": 44148,
+      "true_negatives": 29997
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.8994,
+      "recall": 0.956,
+      "f1": 0.9268,
+      "accuracy": 0.9169,
+      "false_positives": 4849,
+      "false_negatives": 1995,
+      "true_positives": 43337,
+      "true_negatives": 32151
+    },
+    {
+      "threshold": 0.8,
+      "precision": 0.9396,
+      "recall": 0.9313,
+      "f1": 0.9354,
+      "accuracy": 0.9292,
+      "false_positives": 2715,
+      "false_negatives": 3115,
+      "true_positives": 42217,
+      "true_negatives": 34285
+    },
+    {
+      "threshold": 0.9,
+      "precision": 0.9798,
+      "recall": 0.892,
+      "f1": 0.9339,
+      "accuracy": 0.9304,
+      "false_positives": 832,
+      "false_negatives": 4896,
+      "true_positives": 40436,
+      "true_negatives": 36168
+    }
+  ],
+  "validation_threshold_curve": [
+    {
+      "threshold": 0.1,
+      "precision": 0.9135,
+      "recall": 1.0,
+      "f1": 0.9548,
+      "accuracy": 0.9356
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.9163,
+      "recall": 0.9997,
+      "f1": 0.9562,
+      "accuracy": 0.9376
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.9241,
+      "recall": 0.9975,
+      "f1": 0.9594,
+      "accuracy": 0.9426
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.94,
+      "recall": 0.9905,
+      "f1": 0.9646,
+      "accuracy": 0.9505
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.9584,
+      "recall": 0.9755,
+      "f1": 0.9669,
+      "accuracy": 0.9545
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.9721,
+      "recall": 0.9555,
+      "f1": 0.9637,
+      "accuracy": 0.951
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.981,
+      "recall": 0.9341,
+      "f1": 0.957,
+      "accuracy": 0.9429
+    },
+    {
+      "threshold": 0.8,
+      "precision": 0.9884,
+      "recall": 0.9051,
+      "f1": 0.9449,
+      "accuracy": 0.9282
+    },
+    {
+      "threshold": 0.9,
+      "precision": 0.9949,
+      "recall": 0.8677,
+      "f1": 0.927,
+      "accuracy": 0.9069
+    }
+  ]
+}

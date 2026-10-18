@@ -1,0 +1,832 @@
+{
+  "binary_experiments": {
+    "Logistic Regression (Baseline)": {
+      "model_name": "Logistic Regression (Baseline)",
+      "is_binary": true,
+      "training_time_seconds": 1.29,
+      "peak_memory_mb": 3.01,
+      "inference_latency": {
+        "batch_inference_time_seconds": 0.0002,
+        "per_sample_latency_ms": 3e-05
+      },
+      "metrics": {
+        "accuracy": 0.8095,
+        "precision": 0.7535,
+        "recall": 0.9719,
+        "f1": 0.8489,
+        "f1_macro": 0.7956,
+        "f1_weighted": 0.801,
+        "roc_auc": 0.9557,
+        "confusion_matrix": [
+          [
+            22589,
+            14411
+          ],
+          [
+            1272,
+            44060
+          ]
+        ],
+        "classification_report": {
+          "Normal": {
+            "precision": 0.9466912535099116,
+            "recall": 0.6105135135135135,
+            "f1-score": 0.742314454248205,
+            "support": 37000.0
+          },
+          "Attack": {
+            "precision": 0.7535359408937764,
+            "recall": 0.9719403511867997,
+            "f1-score": 0.8489157346126798,
+            "support": 45332.0
+          },
+          "accuracy": 0.8095151338483214,
+          "macro avg": {
+            "precision": 0.850113597201844,
+            "recall": 0.7912269323501566,
+            "f1-score": 0.7956150944304423,
+            "support": 82332.0
+          },
+          "weighted avg": {
+            "precision": 0.8403399365066245,
+            "recall": 0.8095151338483214,
+            "f1-score": 0.8010091202527035,
+            "support": 82332.0
+          }
+        }
+      }
+    },
+    "Random Forest": {
+      "model_name": "Random Forest",
+      "is_binary": true,
+      "training_time_seconds": 2.22,
+      "peak_memory_mb": 101.49,
+      "inference_latency": {
+        "batch_inference_time_seconds": 0.0121,
+        "per_sample_latency_ms": 0.00243
+      },
+      "metrics": {
+        "accuracy": 0.8657,
+        "precision": 0.8092,
+        "recall": 0.9894,
+        "f1": 0.8903,
+        "f1_macro": 0.8586,
+        "f1_weighted": 0.8618,
+        "roc_auc": 0.9824,
+        "confusion_matrix": [
+          [
+            26426,
+            10574
+          ],
+          [
+            482,
+            44850
+          ]
+        ],
+        "classification_report": {
+          "Normal": {
+            "precision": 0.9820871116396611,
+            "recall": 0.7142162162162162,
+            "f1-score": 0.8270013143894348,
+            "support": 37000.0
+          },
+          "Attack": {
+            "precision": 0.8092162240184757,
+            "recall": 0.9893673343333628,
+            "f1-score": 0.8902695621104451,
+            "support": 45332.0
+          },
+          "accuracy": 0.8657144245250935,
+          "macro avg": {
+            "precision": 0.8956516678290685,
+            "recall": 0.8517917752747894,
+            "f1-score": 0.8586354382499399,
+            "support": 82332.0
+          },
+          "weighted avg": {
+            "precision": 0.8869043992356921,
+            "recall": 0.8657144245250935,
+            "f1-score": 0.8618368121993852,
+            "support": 82332.0
+          }
+        }
+      }
+    },
+    "XGBoost": {
+      "model_name": "XGBoost",
+      "is_binary": true,
+      "training_time_seconds": 0.93,
+      "peak_memory_mb": 0.67,
+      "inference_latency": {
+        "batch_inference_time_seconds": 0.0011,
+        "per_sample_latency_ms": 0.00022
+      },
+      "metrics": {
+        "accuracy": 0.8734,
+        "precision": 0.82,
+        "recall": 0.9865,
+        "f1": 0.8956,
+        "f1_macro": 0.8673,
+        "f1_weighted": 0.8702,
+        "roc_auc": 0.9851,
+        "confusion_matrix": [
+          [
+            27185,
+            9815
+          ],
+          [
+            611,
+            44721
+          ]
+        ],
+        "classification_report": {
+          "Normal": {
+            "precision": 0.9780184199165347,
+            "recall": 0.7347297297297297,
+            "f1-score": 0.8390950058645595,
+            "support": 37000.0
+          },
+          "Attack": {
+            "precision": 0.8200271380372598,
+            "recall": 0.9865216624018354,
+            "f1-score": 0.8956021948972643,
+            "support": 45332.0
+          },
+          "accuracy": 0.8733663703055919,
+          "macro avg": {
+            "precision": 0.8990227789768972,
+            "recall": 0.8606256960657825,
+            "f1-score": 0.8673486003809119,
+            "support": 82332.0
+          },
+          "weighted avg": {
+            "precision": 0.8910284185786431,
+            "recall": 0.8733663703055919,
+            "f1-score": 0.8702078646950334,
+            "support": 82332.0
+          }
+        }
+      }
+    }
+  },
+  "multiclass_experiments": {
+    "Logistic Regression (Multiclass)": {
+      "model_name": "Logistic Regression (Multiclass)",
+      "is_binary": false,
+      "training_time_seconds": 10.95,
+      "peak_memory_mb": 16.59,
+      "inference_latency": {
+        "batch_inference_time_seconds": 0.0007,
+        "per_sample_latency_ms": 0.00015
+      },
+      "metrics": {
+        "accuracy": 0.6203,
+        "precision_macro": 0.3957,
+        "recall_macro": 0.548,
+        "f1_macro": 0.3514,
+        "precision_weighted": 0.8336,
+        "recall_weighted": 0.6203,
+        "f1_weighted": 0.6846,
+        "roc_auc_macro": 0.9422,
+        "confusion_matrix": [
+          [
+            386,
+            146,
+            66,
+            0,
+            20,
+            0,
+            58,
+            1,
+            0,
+            0
+          ],
+          [
+            366,
+            95,
+            44,
+            9,
+            29,
+            0,
+            1,
+            27,
+            8,
+            4
+          ],
+          [
+            1162,
+            1201,
+            589,
+            542,
+            148,
+            23,
+            49,
+            91,
+            123,
+            161
+          ],
+          [
+            1539,
+            1234,
+            539,
+            5020,
+            690,
+            31,
+            254,
+            161,
+            494,
+            1170
+          ],
+          [
+            809,
+            300,
+            102,
+            36,
+            3882,
+            3,
+            15,
+            335,
+            468,
+            112
+          ],
+          [
+            19,
+            23,
+            19,
+            288,
+            142,
+            18168,
+            12,
+            31,
+            52,
+            117
+          ],
+          [
+            1958,
+            16,
+            9,
+            351,
+            9045,
+            1,
+            21433,
+            1687,
+            2407,
+            93
+          ],
+          [
+            92,
+            160,
+            73,
+            11,
+            137,
+            7,
+            0,
+            1149,
+            1433,
+            434
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            22,
+            0,
+            0,
+            41,
+            311,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            4,
+            36
+          ]
+        ],
+        "classification_report": {
+          "Analysis": {
+            "precision": 0.06096983099036487,
+            "recall": 0.5701624815361891,
+            "f1-score": 0.11015981735159817,
+            "support": 677.0
+          },
+          "Backdoor": {
+            "precision": 0.029921259842519685,
+            "recall": 0.16295025728987994,
+            "f1-score": 0.05055880787653007,
+            "support": 583.0
+          },
+          "DoS": {
+            "precision": 0.4087439278278973,
+            "recall": 0.14404499877720714,
+            "f1-score": 0.21301989150090417,
+            "support": 4089.0
+          },
+          "Exploits": {
+            "precision": 0.8023014224069043,
+            "recall": 0.4509522098454905,
+            "f1-score": 0.5773765023865662,
+            "support": 11132.0
+          },
+          "Fuzzers": {
+            "precision": 0.2749681257968551,
+            "recall": 0.6403827119762454,
+            "f1-score": 0.38473736372646183,
+            "support": 6062.0
+          },
+          "Generic": {
+            "precision": 0.9964350353754182,
+            "recall": 0.962747072227227,
+            "f1-score": 0.9793014230271668,
+            "support": 18871.0
+          },
+          "Normal": {
+            "precision": 0.9821739528915773,
+            "recall": 0.5792702702702702,
+            "f1-score": 0.7287409472646289,
+            "support": 37000.0
+          },
+          "Reconnaissance": {
+            "precision": 0.32604994324631104,
+            "recall": 0.3286613272311213,
+            "f1-score": 0.32735042735042735,
+            "support": 3496.0
+          },
+          "Shellcode": {
+            "precision": 0.05867924528301887,
+            "recall": 0.8227513227513228,
+            "f1-score": 0.10954561465304685,
+            "support": 378.0
+          },
+          "Worms": {
+            "precision": 0.01689347724073205,
+            "recall": 0.8181818181818182,
+            "f1-score": 0.03310344827586207,
+            "support": 44.0
+          },
+          "accuracy": 0.620281300102026,
+          "macro avg": {
+            "precision": 0.3957136220901598,
+            "recall": 0.5480104470086772,
+            "f1-score": 0.35138942434131926,
+            "support": 82332.0
+          },
+          "weighted avg": {
+            "precision": 0.8336382850244581,
+            "recall": 0.620281300102026,
+            "f1-score": 0.6846161824318653,
+            "support": 82332.0
+          }
+        }
+      }
+    },
+    "Random Forest (Multiclass)": {
+      "model_name": "Random Forest (Multiclass)",
+      "is_binary": false,
+      "training_time_seconds": 1.9,
+      "peak_memory_mb": 103.21,
+      "inference_latency": {
+        "batch_inference_time_seconds": 0.0141,
+        "per_sample_latency_ms": 0.00282
+      },
+      "metrics": {
+        "accuracy": 0.6729,
+        "precision_macro": 0.4686,
+        "recall_macro": 0.5998,
+        "f1_macro": 0.4607,
+        "precision_weighted": 0.8574,
+        "recall_weighted": 0.6729,
+        "f1_weighted": 0.7279,
+        "roc_auc_macro": 0.9518,
+        "confusion_matrix": [
+          [
+            10,
+            354,
+            180,
+            55,
+            75,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            287,
+            191,
+            7,
+            77,
+            0,
+            0,
+            1,
+            10,
+            0
+          ],
+          [
+            132,
+            2294,
+            772,
+            566,
+            171,
+            0,
+            4,
+            50,
+            87,
+            13
+          ],
+          [
+            183,
+            2349,
+            608,
+            6743,
+            388,
+            0,
+            22,
+            464,
+            314,
+            61
+          ],
+          [
+            24,
+            719,
+            358,
+            102,
+            4277,
+            0,
+            57,
+            62,
+            461,
+            2
+          ],
+          [
+            9,
+            15,
+            86,
+            439,
+            104,
+            18166,
+            0,
+            4,
+            42,
+            6
+          ],
+          [
+            2133,
+            0,
+            35,
+            344,
+            12045,
+            0,
+            21795,
+            84,
+            558,
+            6
+          ],
+          [
+            16,
+            279,
+            30,
+            73,
+            20,
+            0,
+            2,
+            2969,
+            106,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2,
+            17,
+            0,
+            0,
+            5,
+            352,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            9,
+            2,
+            0,
+            0,
+            0,
+            3,
+            29
+          ]
+        ],
+        "classification_report": {
+          "Analysis": {
+            "precision": 0.003972983710766786,
+            "recall": 0.014771048744460856,
+            "f1-score": 0.006261740763932373,
+            "support": 677.0
+          },
+          "Backdoor": {
+            "precision": 0.04557725901222805,
+            "recall": 0.4922813036020583,
+            "f1-score": 0.08343023255813954,
+            "support": 583.0
+          },
+          "DoS": {
+            "precision": 0.34129089301503096,
+            "recall": 0.1887992174125703,
+            "f1-score": 0.24311132105180286,
+            "support": 4089.0
+          },
+          "Exploits": {
+            "precision": 0.8085131894484412,
+            "recall": 0.6057312252964426,
+            "f1-score": 0.6925842235004108,
+            "support": 11132.0
+          },
+          "Fuzzers": {
+            "precision": 0.24901024685607825,
+            "recall": 0.7055427251732102,
+            "f1-score": 0.36810396763921166,
+            "support": 6062.0
+          },
+          "Generic": {
+            "precision": 1.0,
+            "recall": 0.9626410895024111,
+            "f1-score": 0.980964980964981,
+            "support": 18871.0
+          },
+          "Normal": {
+            "precision": 0.9959786135356212,
+            "recall": 0.5890540540540541,
+            "f1-score": 0.7402815753273441,
+            "support": 37000.0
+          },
+          "Reconnaissance": {
+            "precision": 0.8158834844737566,
+            "recall": 0.8492562929061785,
+            "f1-score": 0.8322354590049054,
+            "support": 3496.0
+          },
+          "Shellcode": {
+            "precision": 0.18210036213140196,
+            "recall": 0.9312169312169312,
+            "f1-score": 0.3046300302899178,
+            "support": 378.0
+          },
+          "Worms": {
+            "precision": 0.24369747899159663,
+            "recall": 0.6590909090909091,
+            "f1-score": 0.3558282208588957,
+            "support": 44.0
+          },
+          "accuracy": 0.6728853908565321,
+          "macro avg": {
+            "precision": 0.46860245111749216,
+            "recall": 0.5998384796999227,
+            "f1-score": 0.4607431751959541,
+            "support": 82332.0
+          },
+          "weighted avg": {
+            "precision": 0.8573672769202245,
+            "recall": 0.6728853908565321,
+            "f1-score": 0.727915819419488,
+            "support": 82332.0
+          }
+        }
+      }
+    },
+    "XGBoost (Multiclass)": {
+      "model_name": "XGBoost (Multiclass)",
+      "is_binary": false,
+      "training_time_seconds": 8.24,
+      "peak_memory_mb": 1.34,
+      "inference_latency": {
+        "batch_inference_time_seconds": 0.0073,
+        "per_sample_latency_ms": 0.00146
+      },
+      "metrics": {
+        "accuracy": 0.7679,
+        "precision_macro": 0.5333,
+        "recall_macro": 0.5487,
+        "f1_macro": 0.5045,
+        "precision_weighted": 0.8332,
+        "recall_weighted": 0.7679,
+        "f1_weighted": 0.7792,
+        "roc_auc_macro": 0.9629,
+        "confusion_matrix": [
+          [
+            54,
+            36,
+            28,
+            510,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            54,
+            37,
+            28,
+            449,
+            3,
+            0,
+            6,
+            0,
+            6,
+            0
+          ],
+          [
+            55,
+            686,
+            328,
+            2825,
+            45,
+            13,
+            54,
+            26,
+            57,
+            0
+          ],
+          [
+            125,
+            612,
+            105,
+            9709,
+            144,
+            23,
+            143,
+            155,
+            111,
+            5
+          ],
+          [
+            108,
+            93,
+            63,
+            1272,
+            3547,
+            2,
+            716,
+            10,
+            251,
+            0
+          ],
+          [
+            0,
+            3,
+            48,
+            431,
+            49,
+            18301,
+            16,
+            2,
+            16,
+            5
+          ],
+          [
+            475,
+            0,
+            10,
+            884,
+            7383,
+            3,
+            28092,
+            11,
+            141,
+            1
+          ],
+          [
+            0,
+            87,
+            10,
+            504,
+            11,
+            0,
+            5,
+            2836,
+            41,
+            2
+          ],
+          [
+            0,
+            1,
+            0,
+            35,
+            35,
+            1,
+            6,
+            1,
+            298,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            20,
+            0,
+            0,
+            1,
+            0,
+            1,
+            21
+          ]
+        ],
+        "classification_report": {
+          "Analysis": {
+            "precision": 0.06199770378874857,
+            "recall": 0.07976366322008863,
+            "f1-score": 0.06976744186046512,
+            "support": 677.0
+          },
+          "Backdoor": {
+            "precision": 0.023794212218649517,
+            "recall": 0.0634648370497427,
+            "f1-score": 0.03461178671655753,
+            "support": 583.0
+          },
+          "DoS": {
+            "precision": 0.5281803542673108,
+            "recall": 0.08021521154316459,
+            "f1-score": 0.13927813163481953,
+            "support": 4089.0
+          },
+          "Exploits": {
+            "precision": 0.5835086243163652,
+            "recall": 0.8721703197987783,
+            "f1-score": 0.6992186093406791,
+            "support": 11132.0
+          },
+          "Fuzzers": {
+            "precision": 0.3162164571632344,
+            "recall": 0.5851204223028703,
+            "f1-score": 0.4105561664448174,
+            "support": 6062.0
+          },
+          "Generic": {
+            "precision": 0.9977102982064002,
+            "recall": 0.9697949234274813,
+            "f1-score": 0.9835545762347504,
+            "support": 18871.0
+          },
+          "Normal": {
+            "precision": 0.9657590759075908,
+            "recall": 0.7592432432432432,
+            "f1-score": 0.8501392083282896,
+            "support": 37000.0
+          },
+          "Reconnaissance": {
+            "precision": 0.9325879644853666,
+            "recall": 0.8112128146453089,
+            "f1-score": 0.8676763041150375,
+            "support": 3496.0
+          },
+          "Shellcode": {
+            "precision": 0.3232104121475054,
+            "recall": 0.7883597883597884,
+            "f1-score": 0.4584615384615385,
+            "support": 378.0
+          },
+          "Worms": {
+            "precision": 0.6,
+            "recall": 0.4772727272727273,
+            "f1-score": 0.5316455696202531,
+            "support": 44.0
+          },
+          "accuracy": 0.7679031239372297,
+          "macro avg": {
+            "precision": 0.533296510250117,
+            "recall": 0.5486617950863194,
+            "f1-score": 0.5044909332757208,
+            "support": 82332.0
+          },
+          "weighted avg": {
+            "precision": 0.8331860517741245,
+            "recall": 0.7679031239372297,
+            "f1-score": 0.7792268971029442,
+            "support": 82332.0
+          }
+        }
+      }
+    }
+  },
+  "system_meta": {
+    "samples_train": 175341,
+    "samples_test": 82332,
+    "features_count": 194
+  },
+  "best_binary_model": "XGBoost",
+  "best_multiclass_model": "XGBoost (Multiclass)"
+}
